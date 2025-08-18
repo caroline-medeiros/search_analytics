@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: SEU_USUARIO
+  password: SUA_SENHA
+  host: localhost
+
+development:
+  <<: *default
+  database: search_analytics_development
+
+test:
+  <<: *default
+  database: search_analytics_test
+
+production:
+  <<: *default
+  database: search_analytics_production
